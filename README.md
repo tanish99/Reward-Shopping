@@ -12,9 +12,9 @@ $ virtualenv venv
 
 # Activate Virtual environment
 
-#For Linux
+# For Linux
 $ source venv/bin/activate 
-#For Windows
+# For Windows
 $ venv\Scripts\activate.bat 
 
 # Clone Repository

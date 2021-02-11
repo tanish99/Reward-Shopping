@@ -1,5 +1,5 @@
 # Reward-Shopping
-it is Django Website That will use give and use rewards while shopping in this website
+it is Django Website That will use give and let customer use rewards while shopping in this website
 
 # Create project directory
 $ mkdir /opt/Reward Shop

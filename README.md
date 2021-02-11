@@ -15,7 +15,7 @@ $ virtualenv venv
 # For Linux
 $ source venv/bin/activate 
 # For Windows
-$ venv\Scripts\activate.bat 
+$ cd venv\Scripts\activate.bat 
 
 # Clone Repository
 $ git clone  https://github.com/tanish99/Reward-Shopping.git

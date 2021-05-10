@@ -8,8 +8,9 @@ class ProfileView(View):
         customerid = request.session.get('customer')
         custom= Customer.objects.get(pk=customerid)
 
+        if custom.image == '':
+            custom.image = 'uploads/customerimages/defaultimage.jpg'
         data={}
         data['customer']=custom
-        print(data['customer'])
         return render(request, 'userprofile.html', data)
 

@@ -2,6 +2,7 @@ from django.shortcuts import render , redirect , HttpResponseRedirect
 from store.models.product import Product
 from store.models.category import Category
 from store.models.reward import Reward
+from store.models.customer import Customer
 from django.views import View
 
 
@@ -50,9 +51,9 @@ def store(request):
         products = Product.get_all_products_by_categoryid(categoryID)
     else:
         products = Product.get_all_products();
-    customer = request.session.get('customer')
-    reward_point = Reward.objects.filter(customer_id=customer)
-
+    customer_id = request.session.get('customer')
+    reward_point = Reward.get_reward_balance(customer_id)
+    print(reward_point)
     data = {}
     data['products'] = products
     data['categories'] = categories

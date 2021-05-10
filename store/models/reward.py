@@ -9,3 +9,9 @@ class Reward(models.Model):
 
     def __str__(self):
         return str(self.reward_balance)
+
+    @staticmethod
+    def get_reward_balance(customer_id):
+        return Reward.objects.filter(customer=customer_id)
+
+

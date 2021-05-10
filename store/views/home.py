@@ -56,7 +56,7 @@ def store(request):
     data = {}
     data['products'] = products
     data['categories'] = categories
-    data['reward_balance'] = reward_point[0]
+    # data['reward_balance'] = reward_point[0]
 
     print('you are : ', request.session.get('email'))
     return render(request, 'index.html', data)

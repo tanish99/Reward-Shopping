@@ -6,6 +6,10 @@ register = template.Library()
 def currency(number):
     return "₹ "+str(number)
 
+@register.filter(name='rewardstag')
+def rewardstag(number):
+    return "₹ -"+str(number)
+
 
 
 @register.filter(name='multiply')

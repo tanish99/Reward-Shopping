@@ -14,4 +14,11 @@ class Reward(models.Model):
     def get_reward_balance(customer_id):
         return Reward.objects.filter(customer=customer_id)
 
+class RewardTable(models.Model):
+    minimum_amount = models.IntegerField(null=True,blank=True)
+    percentage_discount = models.IntegerField(null=True,blank=True)
+    max_discount = models.IntegerField(null=True,blank=True)
+
+
+
 

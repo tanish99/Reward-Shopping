@@ -1,1 +1,66 @@
-<h1>Reward Page</h1>
+{% extends 'base.html' %}
+
+
+{% block content %}
+{% load cart %}
+{% load custom_filter %}
+<h1><span class="badge badge-info">Reward balance {{balance}}</span></h1>
+
+<div class="container">
+<table class="table">
+  <div class="border rounded p-4 m-4">
+        <p class="display-4 pl-4 ml-4">Rewards Criteria</p>
+  <thead>
+    <tr>
+      <th scope="col">minimum amount</th>
+      <th scope="col">Percentage discount</th>
+      <th scope="col">Max discount</th>
+    </tr>
+  </thead>
+
+
+  <tbody>
+  {% for data in table %}
+    <tr>
+
+      <td>{{data.minimum_amount}}</td>
+      <td>{{data.percentage_discount}}</td>
+      <td>{{data.max_discount}}</td>
+
+    </tr>
+  {% endfor %}
+  </tbody>
+
+</table>
+  </div>
+</div>
+<div class="container">
+<table class="table">
+  <div class="border rounded p-4 m-4">
+        <p class="display-4 pl-4 ml-4">Rewards History</p>
+  <thead>
+    <tr>
+      <th scope="col">rewards transactions</th>
+    </tr>
+  </thead>
+
+
+  <tbody>
+{% for data in reward_log  %}
+    <tr>
+
+      <td>{{data}}</td>
+
+
+    </tr>
+  {% endfor %}
+
+  </tbody>
+
+</table>
+  </div>
+</div>
+
+
+
+{% endblock %}

@@ -3,7 +3,7 @@ from .models.product import Product
 from .models.category import Category
 from .models.customer import Customer
 from .models.orders import Order
-from .models.reward import  Reward
+from .models.reward import  Reward,RewardTable
 
 
 class AdminProduct(admin.ModelAdmin):
@@ -21,3 +21,4 @@ admin.site.register(Category , AdminCategory)
 admin.site.register(Customer )
 admin.site.register(Order )
 admin.site.register(Reward)
+admin.site.register(RewardTable)
